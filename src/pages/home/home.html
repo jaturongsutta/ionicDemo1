@@ -7,21 +7,53 @@
 <ion-content>
   <div class="section">
     <ion-slides pager direction="horizontal" spaceBetween="16">
-        <ion-slide *ngFor="let c of promotions; let i=index">
-            <img src="{{c.img}}" alt="">
-          </ion-slide>
-      <ion-slide>
-        <img src="assets/images/img_demo_banner_1.png" alt="">
+      <ion-slide *ngFor="let c of promotions; let i=index">
+        <img src="{{c.img}}" alt="">
       </ion-slide>
-
-      <ion-slide>
-        <img src="assets/images/img_demo_banner_1.png" alt="">
-      </ion-slide>
-
-      <ion-slide>
-        <img src="assets/images/img_demo_banner_1.png" alt="">
-      </ion-slide>
-
     </ion-slides>
   </div>
+
+
+
+
+      <ion-card *ngFor="let c of promotions; let i=index">
+
+        <img src="{{c.img}}">
+
+
+        <ion-item>
+          <ion-icon name="md-heart" item-start large></ion-icon>
+          <h2>{{c.title}}</h2>
+          <p>{{c.detail}}</p>
+        </ion-item>
+
+
+
+
+
+      </ion-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ion-content>

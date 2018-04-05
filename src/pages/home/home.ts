@@ -27,6 +27,18 @@ export class HomePage {
 
   promotions : any;
   constructor(public navCtrl: NavController, private apollo: Apollo) {
+    //Demo data
+    // this.promotions =[
+    //   {img : 'assets/images/img_demo_banner_1.png'},
+    //   {img : 'assets/images/img_demo_banner_1.png'},
+    //   {img : 'assets/images/img_demo_banner_1.png'},
+    //   {img : 'assets/images/img_demo_banner_1.png'},
+    //   {img : 'assets/images/img_demo_banner_1.png'},
+    //   {img : 'assets/images/img_demo_banner_1.png'},
+    //   {img : 'assets/images/img_demo_banner_1.png'},
+    // ];
+
+
     try {
       this.apollo.watchQuery<any>({
         query
