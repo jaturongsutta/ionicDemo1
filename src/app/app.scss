@@ -14,3 +14,707 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@import "_variable.scss";
+
+.clearfix:after { content: ""; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+
+.content {
+  background: #e3e8ed;
+}
+
+ion-content > .scroll-content {
+  margin: 0 auto;
+  max-width: 800px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 0 3px 1px rgba(0,0,0,0.05);
+  background: $lightGrayColor;
+}
+
+ion-app .ion-page ion-content[padding] .scroll-content {
+  padding: 12px;
+}
+
+.alert-ios .alert-wrapper {
+  min-width: 280px;
+}
+
+.ion-page > .header > .toolbar:first-child .toolbar-background {
+  box-shadow: inset 0 -2px 0 0 $csYellow;
+}
+
+.header {
+  .toolbar {
+    font-family: 'Kanit';
+    font-weight: 500;
+
+    .back-button {
+      color: #fff;
+
+      .back-button-icon {
+        background: url('../assets/images/ic_nav_back.png');
+        background-size: 100%;
+        width: 20px;
+        height: 20px;
+        margin: 0 10px 0 0;
+      }
+
+      .ion-ios-arrow-back:before {
+        content: '';
+      }
+    }
+
+    .button-inner {
+      font-weight: 500;
+    }
+
+    .with-sub-title {
+      h1 {
+        font-size: 2rem;
+        margin: 0 0 0.1rem;
+        color: $csYellow;
+      }
+
+      h2 {
+        font-family: sans-serif;
+        font-size: 1.1rem;
+        margin: 0 0 4px;
+        color: $lightColor;
+      }
+    }
+  }
+  .toolbar-background {
+    background: #003087;
+    border: 0;
+  }
+
+  .toolbar-title {
+    font-size: 18px;
+    color: $csYellow;
+  }
+
+}
+
+.main-button {
+  margin: 2% 0;
+  height: 2.2em;
+  color: #003087;
+  font-family: 'Kanit';
+  font-size: 24px;
+  font-weight: 500;
+  background: $csYellow;
+  padding: 0 16%;
+
+  &.button-ios:hover:not(.disable-hover) {
+    opacity: 1;
+  }
+
+  &.activated {
+    background: darken($csYellow, 5%) !important;
+    opacity: 1 !important;
+  }
+}
+
+.text-input {
+  border-bottom: 1px solid lighten($csBlue, 65%) !important;
+}
+
+.text-input:focus {
+  border-bottom: 1px solid lighten($csBlue, 50%) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: $csBlue;
+}
+
+.button {
+  transition: all 0.2s;
+}
+
+.button.activated {
+  opacity: 1 !important;
+  transform: scale(0.96);
+}
+
+.swipe-card {
+  .swipe-card-row:after {
+    content: "";
+    padding-right: 10px;
+    clear: both;
+  }
+}
+
+.alert-ios .alert-wrapper {
+
+  .alert-radio-group {
+    padding: 5px 0;
+  }
+
+  [aria-checked=true] .alert-radio-label {
+    color: $csBlueLink;
+  }
+
+  .alert-button {
+    height: 50px;
+    color: $csBlueLink;
+  }
+}
+
+.card-shadow {
+  border-radius: 5px;
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox .checkbox-checked .checkbox-inner {
+  left: 6px;
+  top: 2px;
+  width: 7px;
+  height: 12px;
+  border-width: 2px;
+  border-top-width: 0;
+  border-left-width: 0;
+}
+
+.normal-card {
+  margin: 12px auto 12px;
+
+  .card-content {
+    padding: 8px;
+
+    .col {
+      padding: 6px;
+    }
+  }
+
+  .row {
+    margin-bottom: 6px;
+  }
+
+  h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0;
+    white-space: normal;
+
+    &.title {
+      color: $csBlue;
+      font-weight: 600;
+    }
+  }
+}
+
+
+.form-card {
+  margin: 0 auto 12px;
+  width: 100%;
+  max-width: 540px;
+
+  .card-header {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    padding: 12px 14px 8px;
+    white-space: normal;
+
+    h2.subtitle {
+      font-size: 2rem;
+      margin: 4px 0 0;
+      font-weight: normal;
+    }
+
+    span.color-yellow {
+      font-size: 1.8rem;
+      color: $csYellow;
+    }
+
+    span.color-blue {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $csBlueLink;
+    }
+  }
+
+  .card-content {
+    padding: 0 8px 12px;
+
+    .col {
+      padding: 6px;
+    }
+  }
+
+  .form-input {
+    .input-label {
+      margin: 0 0 6px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: $csBlue;
+    }
+
+    .item-input {
+      padding: 8px 10px;
+      min-height: inherit;
+      background: $lightGrayColor;
+      border-radius: 3px;
+
+      .item-inner {
+        padding: 0;
+        border: 0;
+        input.text-input, .select {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 0;
+          margin: 0;
+          border: 0 !important;
+        }
+      }
+    }
+    .select-input {
+      font-size: 16px;
+      .select {
+        width: 100%;
+        max-width: inherit;
+      }
+      .select-text {
+        max-width: 100%;
+      }
+      .placeholder-select {
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+        overflow: visible;
+        color: #999;
+      }
+      .select-icon-inner {
+        left: 0;
+        margin-top: 0px;
+      }
+      &.input-has-value {
+        .placeholder-select {
+          display: none;
+        }
+        .select-icon-inner {
+          margin-top: 1px;
+        }
+      }
+
+    }
+  }
+
+  .btn-large-button {
+    @include btn-large-button;
+  }
+
+}
+
+ion-card-content {
+  .grid {
+    padding: 0;
+    min-height: 100%;
+  }
+}
+
+.progress-steps {
+  background: #fff;
+  padding: 0;
+
+  .toolbar-background {
+    background: #fff;
+  }
+
+  ul.progressbar {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0 0 8px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+
+    li {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      min-height: 1px;
+      -webkit-flex-basis: 0;
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      max-width: 100%;
+      text-align: center;
+      font-weight: normal;
+      font-size: 12px;
+      color: $csBlue;
+    }
+    li:before {
+      position: relative;
+      box-sizing: border-box;
+      content: '';
+      width: 18px;
+      height: 18px;
+      line-height : 18px;
+      border: 2px solid #c3cfe6;
+      border-radius: 100%;
+      display: block;
+      text-align: center;
+      margin: 10px auto 4px auto;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 3;
+    }
+    li:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #e5eaf3;
+      top: 17px;
+      left: -50%;
+      z-index : 2;
+    }
+    li:first-child:after {
+      content: none;
+    }
+    .progressbar li.active {
+      color: green;
+    }
+    li.active.passed:before {
+      background: url('../assets/images/ic_checkmark_passed.png') center center no-repeat;
+      background-size: 100% 100%;
+      background-color: #0066c4;
+    }
+    li.active.current:before {
+      background: #ffd100;
+      box-shadow: inset 0 0 0 2px #fff, 0 2px 4px rgba(0,0,0,0.2);
+    }
+    li.active:before {
+      border-color: #003087;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    li.current {
+      font-weight: bold;
+    }
+    li.current:after {
+      background-color: #003087;
+    }
+
+  }
+
+}
+
+.content-area {
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: #333;
+  }
+
+  p {
+    line-height: 22px;
+  }
+
+  ul, ol {
+    padding-left: 18px;
+    margin: 8px 0;
+
+    li {
+      line-height: 24px;
+      color: #333;
+    }
+  }
+}
+
+.alert-sub-title {
+  margin: 9px 0 0;
+}
+
+
+@media only screen and (min-width : 600px) {
+  .swipe-card {
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 0px;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+
+    .swipe-card-row {
+      margin-left: 8px;
+    }
+
+    .swipe-card-row:after {
+      content: "";
+      padding-right: 16px;
+      clear: both;
+    }
+
+  }
+}
+
+@media screen and (orientation: landscape) {
+  ion-app.ios .scroll-content {
+    padding-left: 0;
+  }
+}
+
+
+// 
+
+.section {
+  padding: 0 10px;
+
+  &.section-line {
+    padding-bottom: 0;
+    border-bottom: 2px solid $csYellow;
+  }
+}
+
+.box {
+  margin: 0 0 15px;
+  ::-webkit-scrollbar-track {
+    display: none;
+    background: transparent;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    display: none;
+    background: transparent;
+  }
+
+  .segment-block {
+    @include box-shadow-grey;
+    background: #fff;
+    padding: 10px 0 0 0;
+    margin-bottom: 8px;
+  }
+
+  .segment {
+    display: -webkit-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 0 10px 8px;
+
+    .segment-button {
+      flex: none;
+      display: block;
+      background: transparentize($csBlue, 0.9);
+      border: 0;
+      border-radius: 5px;
+      margin: 0 8px 0 0;
+      width: 26.5vw;
+      max-width: 120px;
+      height: auto;
+      text-align: center;
+      overflow: visible;
+
+      img {
+        display: block;
+        width: 92px;
+        height: auto;
+        margin: 5px auto;
+        opacity: 0.7;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:active:not(.segment-activated) {
+        background-color: rgba(0, 48, 135, 0.16);
+      }
+
+      &.segment-activated {
+        background: $csYellow;
+
+        img {
+          opacity: 1;
+        }
+
+        &:after {
+          content:'';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -8px;
+          width: 0;
+          height: 0;
+          border-top: solid 8px $csYellow;
+          border-left: solid 8px transparent;
+          border-right: solid 8px transparent;
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      padding-right: 10px;
+      clear: both;
+    }
+  }
+
+  .type-fields {
+
+    .label[stacked] {
+      margin: 0 0 6px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: $csBlue;
+    }
+
+    .item-block {
+      padding: 8px 10px;
+      min-height: inherit;
+      background: $lightGrayColor;
+      border-radius: 3px;
+
+      .item-inner {
+        padding: 0;
+        border: 0;
+        input.text-input, .select {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 0;
+          margin: 0;
+          border: 0 !important;
+        }
+      }
+    }
+
+    .select-input {
+      font-size: 16px;
+      .select {
+        width: 100%;
+        max-width: inherit;
+      }
+      .select-text {
+        max-width: 100%;
+      }
+      .placeholder-select {
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+        overflow: visible;
+        color: #999;
+      }
+      .select-icon-inner {
+        left: 0;
+        margin-top: 0px;
+      }
+      &.input-has-value {
+        .placeholder-select {
+          display: none;
+        }
+        .select-icon-inner {
+          margin-top: 1px;
+        }
+      }
+
+    }
+
+    .bottom-continue {
+      margin: 5px 0;
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        display: flex;
+        border-radius: 5px;
+      }
+
+    }
+
+    .noted {
+      font-size: 0.7em;
+      margin: 0;
+      color: $grayColor;
+    }
+
+    .search {
+      height: 2.2em;
+      margin: 0.4em 0;
+      padding: 0 1.6rem;
+      font-family: 'Kanit';
+      font-size: 1.2em;
+      font-weight: 500;
+      color: $csBlue;
+      background: #fff;
+      border: 1.5px solid $csYellow;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+    }
+
+
+  }
+
+  .product-box {
+    margin-top: 20px;
+    margin-left: -10px;
+    width: 100vw;
+    height: 24vw;
+    max-height: 110px;
+
+    ::-webkit-scrollbar-track {
+      display: none;
+      background: transparent;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      display: none;
+      background: transparent;
+    }
+
+    .card-box {
+      position: relative;
+      cursor: pointer;
+      width: auto;
+      background: #fff;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 0 0 0 10px;
+      text-align: center;
+      padding: 0;
+      border-radius: 5px;
+      overflow: inherit;
+
+      &:active {
+        opacity: 0.9;
+      }
+
+      img {
+        display: block;
+        width: 34vw;
+        max-width: 150px;
+        height: auto;
+        border-radius: 5px;
+      }
+    }
+  }
+}
