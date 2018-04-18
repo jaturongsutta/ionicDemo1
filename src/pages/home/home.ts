@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 
+import { DetailPage } from '../detail/detail';
 
 const query = gql`
 {
@@ -52,6 +53,12 @@ export class HomePage {
     catch (e) {
       console.log(e.message);
     }
+  }
+
+
+  pushToDetail(id){
+    console.log(id);
+    this.navCtrl.push(DetailPage,{contentId : id})
   }
 
 }

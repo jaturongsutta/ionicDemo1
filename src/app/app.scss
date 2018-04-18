@@ -100,11 +100,10 @@ ion-app .ion-page ion-content[padding] .scroll-content {
 .main-button {
   margin: 2% 0;
   height: 2.2em;
-  color: #003087;
+  color: #FFF;
   font-family: 'Kanit';
   font-size: 24px;
   font-weight: 500;
-  background: $csYellow;
   padding: 0 16%;
 
   &.button-ios:hover:not(.disable-hover) {
@@ -406,14 +405,14 @@ ion-card-content {
       box-shadow: inset 0 0 0 2px #fff, 0 2px 4px rgba(0,0,0,0.2);
     }
     li.active:before {
-      border-color: #003087;
+      border-color: #41F3AC;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     li.current {
       font-weight: bold;
     }
     li.current:after {
-      background-color: #003087;
+      background-color: #41F3AC;
     }
 
   }

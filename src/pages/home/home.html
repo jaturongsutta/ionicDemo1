@@ -7,8 +7,8 @@
 <ion-content>
   <div class="section">
     <ion-slides pager direction="horizontal" spaceBetween="16">
-      <ion-slide *ngFor="let c of promotions; let i=index">
-        <img src="{{c.img}}" alt="">
+      <ion-slide *ngFor="let c of promotions; let i=index" (click)="pushToDetail(c.id)">
+        <img src="{{c.img}}" alt="" style="width: 100%">
       </ion-slide>
     </ion-slides>
   </div>
@@ -16,7 +16,7 @@
 
 
 
-      <ion-card *ngFor="let c of promotions; let i=index">
+      <ion-card *ngFor="let c of promotions; let i=index" (click)="pushToDetail(c.id)">
 
         <img src="{{c.img}}">
 

@@ -14,6 +14,7 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { DetailPage } from '../pages/detail/detail';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { ProfilePage } from '../pages/profile/profile';
@@ -29,6 +30,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    DetailPage,
     ProfilePage,
     TabsPage
   ],
@@ -48,6 +50,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs' },
         { component: HomePage, name: 'HomePage', segment: 'home' },
+        { component: DetailPage, name: 'DetailPage', segment: 'detail' },
         { component: ProfilePage, name: 'ProfilePage', segment: 'profile' },
 
       ]
@@ -59,6 +62,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    DetailPage,
     ProfilePage,
     TabsPage
   ],
@@ -74,7 +78,8 @@ export class AppModule {
     httpLink: HttpLink
   ) {
 
-    const http = httpLink.create({ uri: 'http://webapi-webapi.7e14.starter-us-west-2.openshiftapps.com/graphql' });
+    const http = httpLink.create({ uri: 'http://192.168.1.199:8080/graphql' });
+    // const http = httpLink.create({ uri: 'http://webapi-webapi.7e14.starter-us-west-2.openshiftapps.com/graphql' });
     const auth = setContext((_, { headers = new HttpHeaders() }) => {
 
 
