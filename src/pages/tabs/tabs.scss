@@ -1,0 +1,84 @@
+.tabs-ios .tabbar {
+    background: $cTab !important;
+    font-family: 'Kanit';
+  }
+  
+  .tabs-ios .tab-button-icon {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .tabs-ios .tab-button.icon-only {
+    min-height: 48px;
+  }
+  
+  
+  .tabs-ios .tab-button .tab-button-icon {
+    color: $cTabIcon !important;
+   }
+  
+  .tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+    color: $cTabIconActive !important;
+  }
+
+  .tabs-ios .tab-button[aria-selected=true] .tab-button-text {
+    color: $cTabIconActive !important;
+  }
+  
+  .tabs .tab-button-icon {
+    // min-width: 24px;
+    // height: 24px;
+  }
+  
+  .enable-hover .tabs a:hover {
+    opacity: 1;
+  }
+  
+  .ion-ios-icHome {
+    content: url('../assets/images/ic_tab_home_active.png');
+  }
+  
+  .ion-ios-icHome-outline {
+    content: url('../assets/images/ic_tab_home_normal.png');
+  }
+  
+  .ion-ios-icLogin {
+    content: url('../assets/images/ic_tab_login_active.png');
+  }
+  
+  .ion-ios-icLogin-outline {
+    content: url('../assets/images/ic_tab_login_normal.png');
+  }
+  
+  .ion-ios-icMore {
+    content: url('../assets/images/ic_tab_more_active.png');
+  }
+  
+  .ion-ios-icMore-outline {
+    content: url('../assets/images/ic_tab_more_normal.png');
+  }
+  
+  .ion-ios-icHistory {
+    content: url('../assets/images/ic_tab_history_active.png');
+  }
+  
+  .ion-ios-icHistory-outline {
+    content: url('../assets/images/ic_tab_history_normal.png');
+  }
+  
+  .ion-ios-icFavorite {
+    content: url('../assets/images/ic_tab_favorite_active.png');
+  }
+  
+  .ion-ios-icFavorite-outline {
+    content: url('../assets/images/ic_tab_favorite_normal.png');
+  }
+  
+  .ion-ios-icProfile {
+    content: url('../assets/images/ic_tab_profile_active.png');
+  }
+  
+  .ion-ios-icProfile-outline {
+    content: url('../assets/images/ic_tab_profile_normal.png');
+  }
+  

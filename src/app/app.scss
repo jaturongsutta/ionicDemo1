@@ -41,7 +41,7 @@ ion-app .ion-page ion-content[padding] .scroll-content {
 }
 
 .ion-page > .header > .toolbar:first-child .toolbar-background {
-  box-shadow: inset 0 -2px 0 0 $csYellow;
+ // box-shadow: inset 0 -2px 0 0 $csYellow;
 }
 
 .header {
@@ -85,16 +85,17 @@ ion-app .ion-page ion-content[padding] .scroll-content {
     }
   }
   .toolbar-background {
-    background: #003087;
+    background:$cTopBar;
     border: 0;
   }
 
   .toolbar-title {
     font-size: 18px;
-    color: $csYellow;
+    color: $cTopBarFont;
   }
 
 }
+
 
 .main-button {
   margin: 2% 0;
@@ -125,7 +126,7 @@ ion-app .ion-page ion-content[padding] .scroll-content {
 }
 
 .swiper-pagination-bullet-active {
-  background: $csBlue;
+  background: $cTopBar;
 }
 
 .button {
@@ -445,36 +446,8 @@ ion-card-content {
 }
 
 
-@media only screen and (min-width : 600px) {
-  .swipe-card {
-    margin-left: -16px;
-    margin-right: -16px;
-    margin-bottom: 0px;
-    width: auto;
-    padding-left: 0;
-    padding-right: 0;
-
-    .swipe-card-row {
-      margin-left: 8px;
-    }
-
-    .swipe-card-row:after {
-      content: "";
-      padding-right: 16px;
-      clear: both;
-    }
-
-  }
-}
-
-@media screen and (orientation: landscape) {
-  ion-app.ios .scroll-content {
-    padding-left: 0;
-  }
-}
 
 
-// 
 
 .section {
   padding: 0 10px;

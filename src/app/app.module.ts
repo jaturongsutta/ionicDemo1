@@ -4,7 +4,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
-import { ApolloLink, concat } from 'apollo-link';
 import { HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { setContext } from 'apollo-link-context';
@@ -17,6 +16,10 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { ProfilePage } from '../pages/profile/profile';
+
+
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -26,6 +29,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    ProfilePage,
     TabsPage
   ],
   imports: [
@@ -33,7 +37,21 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ApolloModule,
     HttpLinkModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      mode:'ios',
+      backButtonText: '',
+      backButtonIcon: 'ios-arrow-back',
+      scrollAssist: false,
+      autoFocusAssist: false,
+
+    }, {
+      links: [
+        { component: TabsPage, name: 'TabsPage', segment: 'tabs' },
+        { component: HomePage, name: 'HomePage', segment: 'home' },
+        { component: ProfilePage, name: 'ProfilePage', segment: 'profile' },
+
+      ]
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,6 +59,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    ProfilePage,
     TabsPage
   ],
   providers: [
