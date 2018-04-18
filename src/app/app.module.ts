@@ -78,8 +78,8 @@ export class AppModule {
     httpLink: HttpLink
   ) {
 
-    const http = httpLink.create({ uri: 'http://192.168.1.199:8080/graphql' });
-    // const http = httpLink.create({ uri: 'http://webapi-webapi.7e14.starter-us-west-2.openshiftapps.com/graphql' });
+    // const http = httpLink.create({ uri: 'http://192.168.1.199:8080/graphql' });
+    const http = httpLink.create({ uri: 'http://webapi-webapi.7e14.starter-us-west-2.openshiftapps.com/graphql' });
     const auth = setContext((_, { headers = new HttpHeaders() }) => {
 
 
