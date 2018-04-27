@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 /**
@@ -18,10 +18,10 @@ export class DetailPage {
 
   id: string;
   contentImg: string;
-  title :string;
-  detail :string;
-  img :string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private apollo: Apollo) {
+  title: string;
+  detail: string;
+  img: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private apollo: Apollo, private toastCtrl: ToastController) {
     this.id = this.navParams.get('contentId');
     console.log(this.id)
     const query = gql`
@@ -36,7 +36,7 @@ export class DetailPage {
       }}`;
     try {
       this.apollo.watchQuery<any>({
-        query:query
+        query: query
       }).valueChanges.subscribe(
         resp => {
           let data = resp.data.content;
@@ -57,6 +57,41 @@ export class DetailPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
+  }
+
+
+  OrderClick() {
+    const mutation = gql`
+    mutation {
+      create(contentId:"${ this.id}",amount:${12345.50})
+      {
+        message
+      }
+    }`;
+
+
+    this.apollo.mutate<any>({
+      mutation: mutation
+    })
+      .subscribe(({ data }) => {
+        console.log('success')
+        let toast = this.toastCtrl.create({
+          message: 'Order successfully',
+          duration: 3000,
+          position: 'middle'
+        });
+        toast.onDidDismiss(() => {
+          console.log('Dismissed toast');
+          
+        });
+        this.navCtrl.pop();
+        toast.present();
+
+      }, (error) => {
+        console.log('there was an error sending the mutation', error);
+      });
+
+
   }
 
 }

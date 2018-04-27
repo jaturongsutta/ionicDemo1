@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
+import { ContentMapPage } from '../content-map/content-map';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 import { ProfilePage } from '../profile/profile';
@@ -11,7 +11,7 @@ import { ProfilePage } from '../profile/profile';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
+  tab2Root = ContentMapPage;
   tabProfileRoot = ProfilePage;
 
   constructor() {

@@ -18,6 +18,7 @@ import { DetailPage } from '../pages/detail/detail';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { ProfilePage } from '../pages/profile/profile';
+import { ContentMapPage } from '../pages/content-map/content-map';
 
 
 
@@ -33,7 +34,8 @@ import { Push } from '@ionic-native/push';
     HomePage,
     DetailPage,
     ProfilePage,
-    TabsPage
+    TabsPage,
+    ContentMapPage,
   ],
   imports: [
     HttpClientModule, // provides HttpClient for HttpLink
@@ -65,7 +67,8 @@ import { Push } from '@ionic-native/push';
     HomePage,
     DetailPage,
     ProfilePage,
-    TabsPage
+    TabsPage,
+    ContentMapPage,
   ],
   providers: [
     StatusBar,
